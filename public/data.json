@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "image": "https://placehold.co/200x200/ffcc00/000000?text=ChatMaster",
+    "title": "ChatMaster",
+    "companyName": "TechWave",
+    "description": "A powerful AI chat app to help you with daily tasks.",
+    "size": 45,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://placehold.co/200x200/00aaff/ffffff?text=FitLife",
+    "title": "FitLife",
+    "companyName": "HealthPlus",
+    "description": "Track workouts, calories, and health metrics in one place.",
+    "size": 60,
+    "reviews": 800,
+    "ratingAvg": 4.3,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 340 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://placehold.co/200x200/ff6699/ffffff?text=FoodieGo",
+    "title": "FoodieGo",
+    "companyName": "TastyTech",
+    "description": "Discover restaurants and order your favorite meals quickly.",
+    "size": 80,
+    "reviews": 2000,
+    "ratingAvg": 4.7,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://placehold.co/200x200/33cc33/ffffff?text=TravelBuddy",
+    "title": "TravelBuddy",
+    "companyName": "Wanderlust Inc",
+    "description": "Plan trips, book hotels, and explore destinations worldwide.",
+    "size": 120,
+    "reviews": 950,
+    "ratingAvg": 4.4,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 370 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://placehold.co/200x200/9933ff/ffffff?text=MoneyMate",
+    "title": "MoneyMate",
+    "companyName": "FinancePro",
+    "description": "Manage your finances, budgets, and track expenses easily.",
+    "size": 55,
+    "reviews": 600,
+    "ratingAvg": 4.2,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 90 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 250 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://placehold.co/200x200/ff5500/ffffff?text=PhotoSnap",
+    "title": "PhotoSnap",
+    "companyName": "PixelWorks",
+    "description": "Edit and share photos with amazing filters and tools.",
+    "size": 70,
+    "reviews": 1100,
+    "ratingAvg": 4.6,
+    "downloads": 600000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 450 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://placehold.co/200x200/00ccff/000000?text=NewsToday",
+    "title": "NewsToday",
+    "companyName": "InfoStream",
+    "description": "Stay updated with latest news from around the world.",
+    "size": 35,
+    "reviews": 900,
+    "ratingAvg": 4.1,
+    "downloads": 350000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 370 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://placehold.co/200x200/ff0066/ffffff?text=MusicWave",
+    "title": "MusicWave",
+    "companyName": "SoundTech",
+    "description": "Stream millions of songs and create your playlists.",
+    "size": 90,
+    "reviews": 1300,
+    "ratingAvg": 4.5,
+    "downloads": 700000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 540 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://placehold.co/200x200/666666/ffffff?text=WeatherNow",
+    "title": "WeatherNow",
+    "companyName": "ClimateX",
+    "description": "Get accurate weather forecasts anywhere in the world.",
+    "size": 40,
+    "reviews": 500,
+    "ratingAvg": 4.0,
+    "downloads": 200000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 150 },
+      { "name": "5 star", "count": 190 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://placehold.co/200x200/0088cc/ffffff?text=TaskManager",
+    "title": "TaskManager",
+    "companyName": "ProductiveCo",
+    "description": "Organize tasks, set reminders, and boost productivity.",
+    "size": 50,
+    "reviews": 750,
+    "ratingAvg": 4.3,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 290 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://placehold.co/200x200/ffcc99/000000?text=LearnHub",
+    "title": "LearnHub",
+    "companyName": "EduTech",
+    "description": "Learn new skills and courses online at your pace.",
+    "size": 85,
+    "reviews": 1400,
+    "ratingAvg": 4.6,
+    "downloads": 650000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 710 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://placehold.co/200x200/ccffcc/000000?text=ShopEasy",
+    "title": "ShopEasy",
+    "companyName": "EcomWorld",
+    "description": "Shop thousands of products and get fast delivery.",
+    "size": 75,
+    "reviews": 1100,
+    "ratingAvg": 4.4,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 440 }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://placehold.co/200x200/ff99cc/000000?text=GameOn",
+    "title": "GameOn",
+    "companyName": "FunPlay",
+    "description": "Play exciting mini games and challenge friends online.",
+    "size": 120,
+    "reviews": 1600,
+    "ratingAvg": 4.5,
+    "downloads": 800000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://placehold.co/200x200/66ffcc/000000?text=DailyPlanner",
+    "title": "DailyPlanner",
+    "companyName": "OrganizeIt",
+    "description": "Plan your day and set reminders easily with this app.",
+    "size": 65,
+    "reviews": 900,
+    "ratingAvg": 4.4,
+    "downloads": 350000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 425 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://placehold.co/200x200/ffccff/000000?text=PetWorld",
+    "title": "PetWorld",
+    "companyName": "AnimalLovers",
+    "description": "Connect with pet lovers and share cute pet photos.",
+    "size": 50,
+    "reviews": 700,
+    "ratingAvg": 4.3,
+    "downloads": 250000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 355 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://placehold.co/200x200/cc99ff/000000?text=CookBook",
+    "title": "CookBook",
+    "companyName": "TastyTech",
+    "description": "Explore recipes and cook delicious meals easily.",
+    "size": 80,
+    "reviews": 900,
+    "ratingAvg": 4.5,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 360 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://placehold.co/200x200/ffff66/000000?text=StudyMate",
+    "title": "StudyMate",
+    "companyName": "EduTech",
+    "description": "Prepare for exams with interactive lessons and quizzes.",
+    "size": 70,
+    "reviews": 800,
+    "ratingAvg": 4.4,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 400 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://placehold.co/200x200/ff9966/000000?text=PhotoFun",
+    "title": "PhotoFun",
+    "companyName": "PixelWorks",
+    "description": "Apply funny filters and stickers to your photos.",
+    "size": 65,
+    "reviews": 700,
+    "ratingAvg": 4.3,
+    "downloads": 200000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 375 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://placehold.co/200x200/99ccff/000000?text=MindRelax",
+    "title": "MindRelax",
+    "companyName": "CalmTech",
+    "description": "Meditate and relax with guided sessions and music.",
+    "size": 55,
+    "reviews": 600,
+    "ratingAvg": 4.2,
+    "downloads": 180000,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 80 },
+      { "name": "4 star", "count": 150 },
+      { "name": "5 star", "count": 335 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://placehold.co/200x200/ccff99/000000?text=HeroApp",
+    "title": "HeroApp",
+    "companyName": "Hero.io",
+    "description": "The ultimate all-in-one app hub for your favorite tools.",
+    "size": 100,
+    "reviews": 1500,
+    "ratingAvg": 4.6,
+    "downloads": 750000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 450 },
+      { "name": "5 star", "count": 800 }
+    ]
+  }
+]
