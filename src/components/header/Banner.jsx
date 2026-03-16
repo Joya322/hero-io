@@ -2,7 +2,7 @@ import { PiGooglePlayLogoLight } from "react-icons/pi";
 import { FaAppStoreIos } from "react-icons/fa";
 import { Link } from "react-router";
 
-import hero from "../assets/hero.png";
+import hero from "../../assets/hero.png";
 
 const Banner = () => {
   return (
@@ -12,7 +12,7 @@ const Banner = () => {
           <h1 className="text-4xl lg:text-5xl font-bold max-w-md mx-auto">
             We Build <span className="text-purple-600">Productive</span> Apps
           </h1>
-          <p className="py-6 max-w-[750px]">
+          <p className="py-6 max-w-[750px] mx-auto">
             At HERO.IO, we craft innovative apps designed to make everyday life
             simpler, smarter, and more exciting. Our goal is to turn your ideas
             into digital experiences that truly make an impact.
