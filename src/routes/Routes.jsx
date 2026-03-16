@@ -1,9 +1,29 @@
 import { createBrowserRouter } from "react-router";
 import Root from "./Root";
+import ErrorPage from "../pages/ErrorPage";
+import Home from "../pages/Home";
+import Apps from "./../pages/Apps";
+import Installation from './../pages/Installation';
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: Root
+    Component: Root,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        index: true,
+        path: "/",
+        Component: Home,
+      },
+      {
+        path: "apps",
+        Component: Apps,
+      },
+      {
+        path: "installation",
+        Component: Installation,
+      },
+    ],
   },
 ]);
