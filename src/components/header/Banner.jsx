@@ -6,11 +6,11 @@ import hero from "../../assets/hero.png";
 
 const Banner = () => {
   return (
-    <div className="hero">
+    <div className="hero w-11/12 mx-auto">
       <div className="hero-content text-center">
         <div className="">
           <h1 className="text-4xl lg:text-5xl font-bold max-w-md mx-auto">
-            We Build <span className="text-purple-600">Productive</span> Apps
+            We Build <span className="text-violet-600">Productive</span> Apps
           </h1>
           <p className="py-6 max-w-[750px] mx-auto">
             At HERO.IO, we craft innovative apps designed to make everyday life

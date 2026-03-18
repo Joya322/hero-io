@@ -6,10 +6,8 @@ const Root = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="bg-[#f5f4f4]">
-        <div className="w-11/12 mx-auto py-10 ">
-          <Outlet />
-        </div>
+      <div className="relative bg-[#f5f4f4] py-10">
+        <Outlet />
       </div>
       <Footer />
     </div>

@@ -37,7 +37,7 @@ const Navbar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-purple-600"
+                className="h-5 w-5 text-violet-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
           <Link className="flex justify-center items-center gap-1">
             <img src={logo} width={40} height={40} alt="" />{" "}
-            <span className="text-purple-600 font-semibold">HERO.IO</span>
+            <span className="text-violet-600 font-semibold">HERO.IO</span>
           </Link>
         </div>
         <div className="hidden lg:flex">
@@ -70,7 +70,7 @@ const Navbar = () => {
         <a
           href="https://github.com/Joya322"
           target="_blank"
-          className="btn bg-linear-to-br from-purple-800 to-purple-400 text-white"
+          className="btn bg-linear-to-br from-violet-800 to-violet-400 text-white"
         >
           <FaGithub />
           Contribute
