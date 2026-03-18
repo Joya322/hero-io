@@ -23,7 +23,7 @@ const States = () => {
   ];
 
   return (
-    <div className="absolute bg-linear-to-br from-violet-800 to-violet-400 w-full -bottom-86  md:-bottom-47">
+    <div className=" bg-linear-to-br from-violet-800 to-violet-400 -translate-y-4">
       <div className="w-11/12 mx-auto text-white text-center py-10">
         <h2 className="text-3xl mb-8 font-bold">
           Trusted By Millions, Built For You

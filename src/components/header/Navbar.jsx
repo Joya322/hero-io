@@ -30,7 +30,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className=" shadow-md">
+    <div className="shadow-md">
       <div className="w-11/12 mx-auto navbar bg-base-100 px-0 flex justify-between items-center">
         <div className="flex">
           <div className="dropdown">
