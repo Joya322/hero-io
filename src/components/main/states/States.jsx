@@ -23,12 +23,12 @@ const States = () => {
   ];
 
   return (
-    <div className="absolute bg-linear-to-br from-violet-800 to-violet-400 w-full -bottom-118  md:-bottom-45">
+    <div className="absolute bg-linear-to-br from-violet-800 to-violet-400 w-full -bottom-86  md:-bottom-47">
       <div className="w-11/12 mx-auto text-white text-center py-10">
-        <h2 className="text-3xl mb-6 font-bold">
+        <h2 className="text-3xl mb-8 font-bold">
           Trusted By Millions, Built For You
         </h2>
-        <div className="flex flex-col md:flex-row md:justify-around md:items-center gap-8 md:gap-0">
+        <div className="flex flex-wrap justify-around items-center gap-6 md:gap-0">
           {states.map((state) => (
             <State key={state.id} state={state} />
           ))}

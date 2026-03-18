@@ -12,7 +12,7 @@ const Banner = () => {
           <h1 className="text-4xl lg:text-5xl font-bold max-w-md mx-auto">
             We Build <span className="text-violet-600">Productive</span> Apps
           </h1>
-          <p className="py-6 max-w-[750px] mx-auto">
+          <p className="py-6 max-w-187.5 mx-auto">
             At HERO.IO, we craft innovative apps designed to make everyday life
             simpler, smarter, and more exciting. Our goal is to turn your ideas
             into digital experiences that truly make an impact.
