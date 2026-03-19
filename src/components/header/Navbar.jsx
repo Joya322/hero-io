@@ -1,63 +1,64 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import logo from "../../assets/logo.png";
 import { FaGithub } from "react-icons/fa";
-import { useLocation } from "react-router";
+import { useState } from "react";
+import { RiMenuFold4Fill, RiMenuUnfold4Fill } from "react-icons/ri";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const location = useLocation();
   const path = location.pathname;
 
-  const activePath = {
-    color: "#6e11b0",
-    borderBottom: "2px solid #6e11b0",
-    display: "inline-block",
-  };
+  const activePath = "text-violet-600 border-b border-violet-600";
 
   const links = (
-    <span className="flex flex-col lg:flex-row justify-center lg:items-center gap-5 font-medium">
-      <Link to="/">
-        <li className="w-auto" style={path === "/" ? activePath : {}}>
-          Home
-        </li>
-      </Link>
-      <Link to="/apps">
-        <li style={path === "/apps" ? activePath : {}}>Apps</li>
-      </Link>
-      <Link to="/installation">
-        <li style={path === "/installation" ? activePath : {}}>Installation</li>
-      </Link>
-    </span>
+    <>
+      <li>
+        <Link to="/">
+          <span className={`${path === "/" ? activePath : ""}`}>Home</span>
+        </Link>
+      </li>
+      <li>
+        <Link to="/apps">
+          <span className={` ${path === "/apps" ? activePath : ""}`}>Apps</span>
+        </Link>
+      </li>
+      <li>
+        <Link to="/installation">
+          <span className={` ${path === "/installation" ? activePath : ""}`}>
+            Installation
+          </span>
+        </Link>
+      </li>
+    </>
   );
-
+  // className =
+  //   "flex flex-col lg:flex-row justify-center lg:items-center gap-5 font-medium ";
   return (
-    <div className="shadow-md">
-      <div className="w-11/12 mx-auto navbar bg-base-100 px-0 flex justify-between items-center">
-        <div className="flex">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-violet-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
-            </div>
-            <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+    <nav className="shadow-md bg-base-100">
+      <div className="navbar w-11/12 mx-auto  px-0 flex justify-between items-center">
+        {/* left section: logo + menu icon */}
+        <div className="flex gap-1">
+          <details open={isOpen} className="dropdown lg:hidden">
+            <summary
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(!isOpen);
+              }}
+              className="btn btn-ghost p-2"
             >
+              {isOpen ? (
+                <RiMenuUnfold4Fill className="h-6 w-6 text-violet-600" />
+              ) : (
+                <RiMenuFold4Fill className="h-6 w-6 text-violet-600" />
+              )}
+            </summary>
+
+            <ul className="menu  dropdown-content bg-base-100 rounded-box z-1 w-50 p-2 shadow-sm mt-3">
               {links}
             </ul>
-          </div>
+          </details>
           <Link className="flex justify-center items-center gap-1">
             <img src={logo} width={40} height={40} alt="" />{" "}
             <span className="text-violet-600 font-semibold">HERO.IO</span>
@@ -76,7 +77,7 @@ const Navbar = () => {
           Contribute
         </a>
       </div>
-    </div>
+    </nav>
   );
 };
 

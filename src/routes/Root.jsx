@@ -4,13 +4,22 @@ import Footer from "../components/footer/Footer";
 
 const Root = () => {
   return (
-    <>
-      <Navbar />
-      <div className="bg-[#f5f4f4] py-10 ">
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <header>
+        <Navbar />
+      </header>
+
+      {/* Main content */}
+      <main className="bg-[#f5f4f4] py-10 flex-1">
         <Outlet />
-      </div>
-      <Footer />
-    </>
+      </main>
+
+      {/* Footer */}
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
 };
 
