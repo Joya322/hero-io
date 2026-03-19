@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Navbar from "../components/header/Navbar";
 import Footer from "../components/footer/Footer";
 import { useNavigation } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 const Root = () => {
   const navigation = useNavigation();
@@ -28,6 +29,9 @@ const Root = () => {
       <footer>
         <Footer />
       </footer>
+
+      {/* toast container */}
+      <ToastContainer/>
     </div>
   );
 };

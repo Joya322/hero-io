@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { HiOutlineDownload } from "react-icons/hi";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { useLocation } from "react-router";
+import { toast } from "react-toastify";
 import {
   Bar,
   BarChart,
@@ -15,6 +17,7 @@ import {
 
 const Details = () => {
   const { state } = useLocation();
+  const [isInstalled, setIsInstalled] = useState(false);
 
   const {
     image,
@@ -27,6 +30,12 @@ const Details = () => {
     ratings,
     description,
   } = state;
+
+  const handleInstall = () => {
+    setIsInstalled(true);
+    toast.success("App Installed Successfully!");
+  };
+
   return (
     <div className="w-11/12 mx-auto">
       <div>
@@ -80,8 +89,12 @@ const Details = () => {
             </div>
 
             <div className="flex justify-center items-center md:justify-start">
-              <button className="btn bg-emerald-400 text-white shadow-md">
-                Install Now ({size}MB)
+              <button
+                disabled={isInstalled}
+                onClick={handleInstall}
+                className={`btn bg-emerald-500  text-white shadow-md disabled:opacity-70`}
+              >
+                {isInstalled ? "Installed" : `Install Now (${size}MB)`}
               </button>
             </div>
           </div>
@@ -94,7 +107,6 @@ const Details = () => {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               layout="vertical"
-              
               data={ratings}
               margin={{ top: 0, right: 30, bottom: 20, left: -10 }}
             >
