@@ -36,6 +36,8 @@ const Details = () => {
     toast.success("App Installed Successfully!");
   };
 
+  const paragraphs = description.split("\n");
+
   return (
     <div className="w-11/12 mx-auto">
       <div>
@@ -135,7 +137,11 @@ const Details = () => {
         {/* description */}
         <h5 className="font-bold mb-5">Description</h5>
 
-        <p className="text-justify">{description}</p>
+        {paragraphs.map((para, i) => (
+          <p key={i} className="text-justify mb-4">
+            {para}
+          </p>
+        ))}
       </div>
     </div>
   );
