@@ -3,7 +3,10 @@ import TrendingApp from "./TrendingApp";
 
 
 const TrendingApps = () => {
-    const apps = useLoaderData();
+  const apps = useLoaderData();
+  
+
+  
     
     return (
       <div className="w-11/12 mx-auto pt-10 flex flex-col justify-center items-center">
@@ -11,6 +14,8 @@ const TrendingApps = () => {
         <p className="mt-4 mb-6 text-center">
           Explore All Trending Apps on the Market developed by us
         </p>
+
+        
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {apps.slice(0, 8).map((app) => (

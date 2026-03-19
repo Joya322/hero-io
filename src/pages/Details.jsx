@@ -48,7 +48,7 @@ const Details = () => {
               <span className="flex flex-col justify-center items-start gap-2">
                 <HiOutlineDownload size={30} className="text-emerald-600" />
                 <small className="opacity-70 ">Downloads</small>
-                <p className="text-3xl font-bold">{downloads / 1000000}</p>
+                <p className="text-3xl font-bold">{downloads / 1000000}M</p>
               </span>
 
               <span className="flex flex-col justify-center items-start gap-2">

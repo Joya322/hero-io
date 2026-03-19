@@ -1,8 +1,25 @@
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import TrendingApp from "../components/main/trendingApps/TrendingApp";
+import { useEffect, useState } from "react";
 
 const Apps = () => {
-  const apps = useLoaderData();
+  const allApps = useLoaderData();
+  const navigate = useNavigate();
+
+  const [searchText, setSearchText] = useState("");
+
+  const apps =
+    searchText.trim() === ""
+      ? allApps
+      : allApps.filter((app) =>
+          app.title.toLowerCase().includes(searchText.toLowerCase()),
+        );
+
+  useEffect(() => {
+    if (apps.length === 0) {
+      navigate("/app-not-found");
+    }
+  }, [apps, navigate]);
 
   return (
     <div className="w-11/12 mx-auto py-3">
@@ -33,6 +50,8 @@ const Apps = () => {
             </g>
           </svg>
           <input
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
             className="bg-transparent"
             type="search"
             required
