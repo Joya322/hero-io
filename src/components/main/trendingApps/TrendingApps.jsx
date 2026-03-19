@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import TrendingApp from "./TrendingApp";
 
 
@@ -16,9 +16,11 @@ const TrendingApps = () => {
           {apps.slice(0, 8).map((app) => (
             <TrendingApp key={app.id} app={app} />
           ))}
-            </div>
-            
-            <button className="btn mt-8 bg-linear-to-br from-violet-800 to-violet-400 text-white mb-5">Show All</button>
+        </div>
+
+        <button className="btn mt-8 bg-linear-to-br from-violet-800 to-violet-400 text-white mb-5">
+          <Link to="/apps">Show All</Link>
+        </button>
       </div>
     );
 };
