@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
@@ -15,6 +15,8 @@ import {
   YAxis,
 } from "recharts";
 
+import { getData, saveData } from "./../utilities/storage";
+
 const Details = () => {
   const app = useLoaderData();
 
@@ -30,14 +32,28 @@ const Details = () => {
     size,
     ratings,
     description,
+    id,
   } = app;
+
+  const paragraphs = description.split("\n");
 
   const handleInstall = () => {
     setIsInstalled(true);
     toast.success("App Installed Successfully!");
+    // console.log(id);
+    saveData(id);
   };
 
-  const paragraphs = description.split("\n");
+  useEffect(() => {
+    const data = getData();
+    if (data === null) return;
+    console.log(data);
+    const alreadyInstalled = data.includes(id);
+
+    if (alreadyInstalled) {
+      setIsInstalled(true);
+    }
+  }, [id]);
 
   return (
     <div className="w-11/12 mx-auto">

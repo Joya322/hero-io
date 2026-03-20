@@ -2,11 +2,13 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 
+
 const TrendingApp = ({ app }) => {
   const { image, title, downloads, ratingAvg } = app;
+  
 
   return (
-    <Link to={`/app-details/${app.id}`} state={app}>
+    <Link to={`/app-details/${app.id}`}>
       <div className="p-5 bg-base-100 rounded-lg shadow-sm hover:shadow-2xl flex flex-col justify-between h-full">
         {/* <div className="rounded-lg h-40 "> */}
         <img
