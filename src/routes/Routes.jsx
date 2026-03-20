@@ -1,17 +1,17 @@
 import { createBrowserRouter } from "react-router";
 import Root from "./Root";
-import ErrorPage from "../pages/AppNotFound";
 import Home from "../pages/Home";
 import Apps from "./../pages/Apps";
 import Installation from "./../pages/Installation";
-// import Details from "../components/main/trendingApps/Details";
 import Details from "./../pages/Details";
-import PageNotFound from "../pages/PageNotFound";
+import PageNotFound from "./../pages/PageNotFound";
+import AppNotFound from "../pages/AppNotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    // errorElement: <PageNotFound/>,
     children: [
       {
         index: true, //Home page
@@ -39,19 +39,31 @@ export const router = createBrowserRouter([
         path: "installation",
         Component: Installation,
       },
-
       {
         path: "app-details/:appId",
         Component: Details,
-      },
-      {
-        path: "app-not-found",
-        Component: ErrorPage,
+        loader: async ({ params }) => {
+          const res = await fetch("/data.json");
+          if (!res.ok) {
+            throw new Response("Failed to fetch data", { status: res.status });
+          }
+
+          const apps = await res.json();
+          const id = parseInt(params.appId);
+
+          const app = apps.find((app) => app.id === id);
+
+          if (!app) {
+            throw new Response("App Not Found", { status: 404 });
+          }
+          return app;
+        },
+        errorElement: <AppNotFound />,
       },
       {
         path: "*",
-        Component: PageNotFound
-      }
+        Component: PageNotFound,
+      },
     ],
   },
 ]);

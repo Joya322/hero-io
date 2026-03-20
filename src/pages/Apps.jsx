@@ -1,6 +1,6 @@
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData } from "react-router";
 import TrendingApp from "../components/main/trendingApps/TrendingApp";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Apps = () => {
   const allApps = useLoaderData();
@@ -13,11 +13,6 @@ const Apps = () => {
       : allApps.filter((app) =>
           app.title.toLowerCase().includes(searchText.toLowerCase()),
         );
-
-  useEffect(() => {
-    if (apps.length === 0) {
-    }
-  }, [apps]);
 
   return (
     <div className="w-11/12 mx-auto py-3">

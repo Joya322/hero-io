@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import { HiOutlineDownload } from "react-icons/hi";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
-import { useLocation } from "react-router";
+import { useLoaderData } from "react-router";
 import { toast } from "react-toastify";
 import {
   Bar,
@@ -16,7 +16,8 @@ import {
 } from "recharts";
 
 const Details = () => {
-  const { state } = useLocation();
+  const app = useLoaderData();
+
   const [isInstalled, setIsInstalled] = useState(false);
 
   const {
@@ -29,7 +30,7 @@ const Details = () => {
     size,
     ratings,
     description,
-  } = state;
+  } = app;
 
   const handleInstall = () => {
     setIsInstalled(true);

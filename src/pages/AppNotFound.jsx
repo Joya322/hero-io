@@ -1,23 +1,21 @@
 import { useNavigate } from "react-router";
-import img from "../assets/error-404.png";
-import { useState } from "react";
+import img from "../assets/App-Error.png";
 
-const ErrorPage = () => {
-  const [info, setInfo] = useState({});
 
+const AppNotFound = () => {
   const navigate = useNavigate();
 
-  const newInfo = {
-    title: "OOPS, page not found!",
-    description: "The page you are looking for is not available",
-    image: img,
-  };
-  setInfo(newInfo);
+  const info = {
+      title: "OOPS!! APP NOT FOUND",
+      description:
+        "The App you are requesting is not found on our system. Please try another apps.",
+      image: img,
+      };
 
   return (
     <div className="w-11/12 mx-auto flex flex-col justify-center items-center gap-3 text-center">
       <div>
-        <img src={img1} alt="" />
+        <img src={info.image} alt="" />
       </div>
       <h1 className="text-4xl font-bold">{info.title}</h1>
       <p className="opacity-70">{info.description}</p>
@@ -31,4 +29,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default AppNotFound;
