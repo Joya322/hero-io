@@ -1,18 +1,17 @@
 import { createBrowserRouter } from "react-router";
 import Root from "./Root";
-import ErrorPage from "../pages/ErrorPage";
+import ErrorPage from "../pages/AppNotFound";
 import Home from "../pages/Home";
 import Apps from "./../pages/Apps";
 import Installation from "./../pages/Installation";
 // import Details from "../components/main/trendingApps/Details";
-import Details from './../pages/Details';
+import Details from "./../pages/Details";
 import PageNotFound from "../pages/PageNotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <ErrorPage />,
     children: [
       {
         index: true, //Home page
@@ -46,8 +45,12 @@ export const router = createBrowserRouter([
         Component: Details,
       },
       {
-        path: "/app-not-found",
-        Component: ErrorPage
+        path: "app-not-found",
+        Component: ErrorPage,
+      },
+      {
+        path: "*",
+        Component: PageNotFound
       }
     ],
   },

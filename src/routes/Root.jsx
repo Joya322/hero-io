@@ -19,9 +19,12 @@ const Root = () => {
       <main className="bg-[#f5f4f4] py-10 flex-1">
         {isNavigating && (
           <div className="text-5xl text-center flex justify-center items-center h-64 text-violet-700">
-            Loading...
+            <span className="loading loading-bars loading-xl"></span>
           </div>
         )}
+        {/* {navigation.state === "loading" && (
+          <span className="loading loading-bars loading-xl"></span>
+        )} */}
         <Outlet />
       </main>
 
@@ -31,7 +34,7 @@ const Root = () => {
       </footer>
 
       {/* toast container */}
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 const Apps = () => {
   const allApps = useLoaderData();
-  const navigate = useNavigate();
 
   const [searchText, setSearchText] = useState("");
 
@@ -17,9 +16,8 @@ const Apps = () => {
 
   useEffect(() => {
     if (apps.length === 0) {
-      navigate("/app-not-found");
     }
-  }, [apps, navigate]);
+  }, [apps]);
 
   return (
     <div className="w-11/12 mx-auto py-3">
@@ -62,9 +60,13 @@ const Apps = () => {
 
       {/* all apps */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
-        {apps.map((app) => (
-          <TrendingApp key={app.id} app={app} />
-        ))}
+        {apps.length < 1 && (
+          <p className="text-5xl text-violet-600 font-bold sm:col-span-2 lg:col-span-4 self-center justify-self-center">
+            No App Found
+          </p>
+        )}
+        {apps.length > 0 &&
+          apps.map((app) => <TrendingApp key={app.id} app={app} />)}
       </div>
     </div>
   );
