@@ -51,7 +51,6 @@ const Details = () => {
   useEffect(() => {
     const isAlreadyIncluded = installedApps.includes(id);
     if (isAlreadyIncluded) {
-      console.log("already installed");
       setIsInstalled(true);
     }
   }, [installedApps, id]);

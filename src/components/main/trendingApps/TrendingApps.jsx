@@ -15,8 +15,6 @@ const TrendingApps = () => {
           Explore All Trending Apps on the Market developed by us
         </p>
 
-        
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {apps.slice(0, 8).map((app) => (
             <TrendingApp key={app.id} app={app} />

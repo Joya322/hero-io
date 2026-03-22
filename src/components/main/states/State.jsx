@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const State = ({ state }) => {
   const { title, count, description } = state;
