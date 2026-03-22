@@ -4,6 +4,7 @@ import { FaCaretDown } from "react-icons/fa";
 import InstalledApp from "../components/main/InstalledApp";
 import { useLoaderData } from "react-router";
 import { saveData as saveUpdatedInstalledApps } from "../utilities/storage";
+import { toast } from "react-toastify";
 
 const Installation = () => {
   const { installedApps, setInstalledApps } = useContext(InstalledAppsContext);
@@ -17,6 +18,8 @@ const Installation = () => {
 
     setInstalledApps(updatedApps);
     saveUpdatedInstalledApps(updatedApps);
+
+    toast.warning("App Uninstalled")
   };
 
   useEffect(() => {

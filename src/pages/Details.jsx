@@ -6,14 +6,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { useLoaderData } from "react-router";
 import { toast } from "react-toastify";
-import {
-  Bar,
-  BarChart,
-  Rectangle,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-} from "recharts";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 import { saveData as saveInstalledApps } from "./../utilities/storage";
 import InstalledAppsContext from "../context/InstalledAppsContext";
@@ -122,32 +115,29 @@ const Details = () => {
         <h5 className="font-bold my-6">Ratings</h5>
 
         {/* chart */}
-        <div className="w-full h-72">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              layout="vertical"
-              data={ratings}
-              margin={{ top: 0, right: 30, bottom: 20, left: -10 }}
-            >
-              <XAxis type="number" axisLine={false} tickLine={false} />
+        {ratings && ratings.length > 0 && (
+          <div className="w-full" >
+            <ResponsiveContainer width="100%" aspect={2}>
+              <BarChart
+                layout="vertical"
+                data={ratings || []}
+                margin={{ top: 0, right: 30, bottom: 20, left: 5 }}
+              >
+                <XAxis type="number" axisLine={false} tickLine={false} />
 
-              <YAxis
-                type="category"
-                axisLine={false}
-                tickLine={false}
-                reversed={true}
-                dataKey="name"
-              />
+                <YAxis
+                  type="category"
+                  axisLine={false}
+                  tickLine={false}
+                  reversed={true}
+                  dataKey="name"
+                />
 
-              <Bar
-                dataKey="count"
-                fill="#ff8811"
-                shape={Rectangle}
-                barSize={25}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+                <Bar dataKey="count" fill="#ff8811" barSize={25} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        )}
 
         <div className="w-full border-t border-gray-300 my-6"></div>
 
