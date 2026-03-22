@@ -5,7 +5,7 @@ const InstalledApp = ({ app, handleInstallation }) => {
   const { image, title, downloads, size, ratingAvg, id } = app;
 
   return (
-    <div className="flex justify-between items-center bg-base-100 p-5 rounded-lg">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-center bg-base-100 p-5 rounded-lg">
       <div className="flex gap-5 justify-start items-center">
         <div>
           <img
@@ -18,7 +18,7 @@ const InstalledApp = ({ app, handleInstallation }) => {
         </div>
 
         <div className="flex flex-col gap-3">
-          <h4 className="font-medium">{title}</h4>
+          <h4 className="font-medium text-wrap">{title}</h4>
           <div className="flex gap-5">
             <p className="flex justify-center items-center gap-1 text-emerald-500 font-semibold">
               <MdOutlineFileDownload />
