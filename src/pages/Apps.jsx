@@ -7,6 +7,8 @@ const Apps = () => {
 
   const [searchText, setSearchText] = useState("");
 
+  
+
   const apps =
     searchText.trim() === ""
       ? allApps
