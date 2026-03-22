@@ -15,17 +15,17 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link to="/">
+        <Link to="/" onClick={() => setIsOpen(false)}>
           <span className={`${path === "/" ? activePath : ""}`}>Home</span>
         </Link>
       </li>
       <li>
-        <Link to="/apps">
+        <Link to="/apps" onClick={() => setIsOpen(false)}>
           <span className={` ${path === "/apps" ? activePath : ""}`}>Apps</span>
         </Link>
       </li>
       <li>
-        <Link to="/installation">
+        <Link to="/installation" onClick={() => setIsOpen(false)}>
           <span className={` ${path === "/installation" ? activePath : ""}`}>
             Installation
           </span>

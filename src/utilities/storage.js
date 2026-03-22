@@ -6,18 +6,6 @@ export const getData = () => {
   return installedApps;
 };
 
-export const saveData = (id) => {
-  const prevData = getData();
-
-  if (prevData === null) {
-    localStorage.setItem("installedApps", JSON.stringify([id]));
-    return;
-  }
-
-  if (prevData.includes(id)) {
-    return;
-  }
-
-  const newData = [...prevData, id];
-  localStorage.setItem("installedApps", JSON.stringify(newData));
+export const saveData = (data) => {
+  localStorage.setItem("installedApps", JSON.stringify(data));
 };

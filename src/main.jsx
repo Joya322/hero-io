@@ -7,8 +7,8 @@ import  { InstalledAppsProvider } from "./context/InstalledAppsContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <InstalledAppsProvider> */}
+    <InstalledAppsProvider>
       <RouterProvider router={router} />
-    {/* </InstalledAppsProvider> */}
+    </InstalledAppsProvider>
   </StrictMode>,
 );

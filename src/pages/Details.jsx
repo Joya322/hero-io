@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
@@ -15,13 +15,13 @@ import {
   YAxis,
 } from "recharts";
 
-import { getData, saveData } from "./../utilities/storage";
+import { saveData as saveInstalledApps } from "./../utilities/storage";
+import InstalledAppsContext from "../context/InstalledAppsContext";
 
 const Details = () => {
+  const { installedApps, setInstalledApps } = useContext(InstalledAppsContext);
+
   const app = useLoaderData();
-
-  const [isInstalled, setIsInstalled] = useState(false);
-
   const {
     image,
     title,
@@ -34,26 +34,27 @@ const Details = () => {
     description,
     id,
   } = app;
-
   const paragraphs = description.split("\n");
 
+  const [isInstalled, setIsInstalled] = useState(false);
+
   const handleInstall = () => {
+    const updatedApps = [...installedApps, id];
+
+    setInstalledApps(updatedApps);
+    saveInstalledApps(updatedApps);
+
     setIsInstalled(true);
     toast.success("App Installed Successfully!");
-    // console.log(id);
-    saveData(id);
   };
 
   useEffect(() => {
-    const data = getData();
-    if (data === null) return;
-    console.log(data);
-    const alreadyInstalled = data.includes(id);
-
-    if (alreadyInstalled) {
+    const isAlreadyIncluded = installedApps.includes(id);
+    if (isAlreadyIncluded) {
+      console.log("already installed");
       setIsInstalled(true);
     }
-  }, [id]);
+  }, [installedApps, id]);
 
   return (
     <div className="w-11/12 mx-auto">
